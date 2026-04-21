@@ -10,6 +10,12 @@ The textures were created while loosely referencing the original textures, mainl
 ## How are assets made?
 The app [McPerlin](https://mcperlin.streamlit.app/) was used for a few textures. A few were then tweaked slightly with Aseprite, though [LibreSprite](https://github.com/LibreSprite/LibreSprite) can also be used.
 
+| Blocks | Items |
+| :-----: | :---- |
+| ![](./textures/terrain/stone.png) | ![](./textures/gui/items/apple.png) |
+| ![](./textures/terrain/orange_wool.png) | ![](./textures/gui/items/iron_sword.png) |
+| ![](./textures/terrain/log_top.png) | ![](./textures/gui/items/diamond.png) |
+
 ## Progress
 - achievement
     - [ ] bg
