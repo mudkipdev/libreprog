@@ -10,6 +10,13 @@ The textures were created while loosely referencing the original textures, mainl
 ## How are assets made?
 The app [McPerlin](https://mcperlin.streamlit.app/) was used for a few textures. A few were then tweaked slightly with Aseprite, though [LibreSprite](https://github.com/LibreSprite/LibreSprite) can also be used.
 
+## How can I contribute?
+In any way you want! Though for ease to access we recommend sticking to the tools that're already in use.
+
+- [LibreSprite](https://github.com/LibreSprite/LibreSprite)/[Aseprite](https://www.aseprite.org/) for Pixel-art edits
+- [Krita](https://krita.org/) for more general artwork (or for those that just prefer it)
+- [McPerlin](https://mcperlin.streamlit.app/) or any other program/website that can generate noise. This is just a convenient one I stumbled upon at random
+
 | Blocks | Items |
 | :-----: | :---- |
 | ![](./textures/terrain/stone.png) | ![](./textures/gui/items/apple.png) |
@@ -60,8 +67,8 @@ The app [McPerlin](https://mcperlin.streamlit.app/) was used for a few textures.
     - [ ] mapbg
     - [ ] mapicons
     - [ ] pumpkinblur
-    - [ ] shadow
-    - [ ] vignette
+    - [x] shadow
+    - [x] vignette
     - [ ] water
     - [ ] watercolor
 - mob
