@@ -173,6 +173,7 @@ terrainMap = {
     "breaking_stage_7": [7,15],
     "breaking_stage_8": [8,15],
     "breaking_stage_9": [9,15],
+    "water": [[13,12],[14,12],[15,12],[14,13],[15,13]],
 }
 
 itemMap = {
@@ -324,7 +325,8 @@ def generate_atlas(mapping, atlas_name):
     missing = 0
     atlas = Image.new("RGBA", (ATLAS_SIZE, ATLAS_SIZE))
 
-    for name, (x, y) in mapping.items():
+    for name, coords in mapping.items():
+        positions = coords if isinstance(coords[0], list) else [coords]
         path = get_texture_path(name, atlas_name)
 
         if not os.path.exists(path):
@@ -338,7 +340,8 @@ def generate_atlas(mapping, atlas_name):
             print(f"Wrong size: {path} -> {tile.size}")
             continue
 
-        atlas.paste(tile, (x * TILE_SIZE, y * TILE_SIZE))
+        for (x, y) in positions:
+            atlas.paste(tile, (x * TILE_SIZE, y * TILE_SIZE))
 
     print(f"{atlas_name}.png progress: {len(mapping) - missing}/{len(mapping)}")
 
