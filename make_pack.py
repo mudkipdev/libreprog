@@ -348,20 +348,19 @@ def generate_atlas(mapping, atlas_name):
     # Save atlas
     atlas.save(os.path.join(TEMP_FOLDER, f"{atlas_name}.png"))
 
-def copy_files(file_list, base_folder):
+def copy_files(file_list, base_folder, ext="png"):
     missing = 0
     for file in file_list:
-        src_path = os.path.join(BASE_FOLDER, base_folder, f"{file}.png")
-        dst_path = os.path.join(TEMP_FOLDER, base_folder, f"{file}.png")
+        src_path = os.path.join(BASE_FOLDER, base_folder, f"{file}.{ext}")
+        dst_path = os.path.join(TEMP_FOLDER, base_folder, f"{file}.{ext}")
 
         if not os.path.exists(src_path):
-            #print(f"Missing: {src_path}")
             missing += 1
             continue
 
         shutil.copy(src_path, dst_path)
 
-    print(f"{base_folder} progress: {len(file_list) - missing}/{len(file_list)}")
+    print(f"{base_folder} ({ext}) progress: {len(file_list) - missing}/{len(file_list)}")
 
 # Create temp folder
 if not os.path.exists(TEMP_FOLDER):
@@ -375,6 +374,14 @@ generate_atlas(itemMap, ITEMS_FOLDER)
 
 # Copy raw files
 copy_files(guiFiles, "gui")
+
+# Copy .txt files from all subdirectories
+import glob
+for src_path in glob.glob(os.path.join(BASE_FOLDER, "**", "*.txt"), recursive=True):
+    rel_path = os.path.relpath(src_path, BASE_FOLDER)
+    dst_path = os.path.join(TEMP_FOLDER, rel_path)
+    os.makedirs(os.path.dirname(dst_path), exist_ok=True)
+    shutil.copy(src_path, dst_path)
 
 # Create texture pack zip
 with zipfile.ZipFile("LibreProg.zip", "w") as zipf:
