@@ -17,11 +17,11 @@ In any way you want! Though for ease to access we recommend sticking to the tool
 - [Krita](https://krita.org/) for more general artwork (or for those that just prefer it)
 - [McPerlin](https://mcperlin.streamlit.app/) or any other program/website that can generate noise. This is just a convenient one I stumbled upon at random
 
-| Blocks | Items |
-| :-----: | :---- |
-| ![](./textures/terrain/stone.png) | ![](./textures/gui/items/apple.png) |
-| ![](./textures/terrain/orange_wool.png) | ![](./textures/gui/items/iron_sword.png) |
-| ![](./textures/terrain/log_top.png) | ![](./textures/gui/items/diamond.png) |
+## Examples
+
+| Stone | Grass | Planks | Oak Log |
+| :-----: | :----: | :----: | :----: |
+| ![](./misc/stone.png) | ![](./misc/grass_block.png) | ![](./misc/planks.png) | ![](./misc/oak_log.png) |
 
 ## Progress
 - achievement

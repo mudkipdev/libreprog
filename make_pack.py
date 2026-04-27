@@ -3,6 +3,9 @@ import zipfile
 import os
 from PIL import Image
 
+# NOTE: This script was written with AI assistance,
+# so some parts may be less efficient or more verbose than necessary.
+
 BASE_FOLDER = "textures"
 ITEMS_FOLDER = "gui/items"
 TERRAIN_FOLDER = "terrain"
