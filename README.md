@@ -49,7 +49,7 @@ In any way you want! Though for ease to access we recommend sticking to the tool
     - [ ] inventory
     - [ ] items.png (WIP)
     - [ ] logo
-    - [ ] particles
+    - [x] particles
     - [ ] slot
     - [ ] trap
     - [ ] unknown_pack
@@ -102,7 +102,7 @@ In any way you want! Though for ease to access we recommend sticking to the tool
     - [ ] mclogo
     - [ ] mojang
 - [ ] pack
-- [ ] particles
+- [ ] particles (WIP)
 - [ ] terrain.png (WIP)
 - [ ] Sounds
 - [ ] Music

@@ -14,6 +14,7 @@ TEMP_FOLDER = "temp"
 ATLAS_SIZE = 256
 TILE_SIZE = 16
 
+# ./terrain.png
 terrainMap = {
     "grass_top_base": [0,0],
     "stone": [1,0],
@@ -179,6 +180,7 @@ terrainMap = {
     "water": [[13,12],[14,12],[15,12],[14,13],[15,13]],
 }
 
+# ./gui/items.png
 itemMap = {
     "leather_helmet": [0,0],
     "chainmail_helmet": [1,0],
@@ -305,6 +307,13 @@ itemMap = {
     "record_cat": [1,15],
 }
 
+# ./
+rootFiles = [
+    "pack",
+    "particles",
+]
+
+# ./gui/
 guiFiles = [
     "background",
     "container",
@@ -377,6 +386,7 @@ generate_atlas(itemMap, ITEMS_FOLDER)
 
 # Copy raw files
 copy_files(guiFiles, "gui")
+copy_files(rootFiles, ".")
 
 # Copy .txt files from all subdirectories
 import glob
