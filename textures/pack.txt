@@ -1,2 +1,1 @@
-A free, open-source and permissively licensed set of textues
-for Minecraft Beta 1.7.3 or any projects that need voxel-game textures.
+A free, open-source and permissively licensed set of textures that offer a Minecraft Beta 1.7.3-like look
