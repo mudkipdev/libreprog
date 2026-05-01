@@ -9,6 +9,8 @@ from PIL import Image
 BASE_FOLDER = "textures"
 ITEMS_FOLDER = "gui/items"
 TERRAIN_FOLDER = "terrain"
+GUI_FOLDER = "gui"
+MOB_FOLDER = "mob"
 TEMP_FOLDER = "temp"
 
 ATLAS_SIZE = 256
@@ -313,6 +315,32 @@ rootFiles = [
     "particles",
 ]
 
+# ./
+mobFiles = [
+    "char",
+    "chicken",
+    "cow",
+    "creeper",
+    "ghast",
+    "ghast_fire",
+    "pig",
+    "pigman",
+    "pigzombie",
+    "saddle",
+    "sheep",
+    "sheep_fur",
+    "silverfish",
+    "skeleton",
+    "slime",
+    "spider",
+    "spider_eyes",
+    "squid",
+    "wolf",
+    "wolf_angry",
+    "wolf_tame",
+    "zombie",
+]
+
 # ./gui/
 guiFiles = [
     "background",
@@ -361,6 +389,7 @@ def generate_atlas(mapping, atlas_name):
     atlas.save(os.path.join(TEMP_FOLDER, f"{atlas_name}.png"))
 
 def copy_files(file_list, base_folder, ext="png"):
+    os.makedirs(os.path.join(TEMP_FOLDER, base_folder), exist_ok=True)
     missing = 0
     for file in file_list:
         src_path = os.path.join(BASE_FOLDER, base_folder, f"{file}.{ext}")
@@ -385,7 +414,8 @@ generate_atlas(terrainMap, TERRAIN_FOLDER)
 generate_atlas(itemMap, ITEMS_FOLDER)
 
 # Copy raw files
-copy_files(guiFiles, "gui")
+copy_files(guiFiles, GUI_FOLDER)
+copy_files(mobFiles, MOB_FOLDER)
 copy_files(rootFiles, ".")
 
 # Copy .txt files from all subdirectories
