@@ -15,7 +15,7 @@ In any way you want! Though for ease to access we recommend sticking to the tool
 
 - [LibreSprite](https://github.com/LibreSprite/LibreSprite)/[Aseprite](https://www.aseprite.org/) for Pixel-art edits
 - [Krita](https://krita.org/) for more general artwork (or for those that just prefer it)
-- [McPerlin](https://mcperlin.streamlit.app/) or any other program/website that can generate noise. This is just a convenient one I stumbled upon at random
+- [McPerlin](https://mcperlin.streamlit.app/), [Seamless Perlin Noise](https://gen3vra.github.io/perlinnoisegenerator/) or any other program/website that can generate noise. This is just a convenient one I stumbled upon at random
 
 ## Examples
 
