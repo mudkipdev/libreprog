@@ -78,7 +78,7 @@ In any way you want! Though for ease to access we recommend sticking to the tool
     - [ ] creeper
     - [ ] ghast
     - [ ] ghast_fire
-    - [ ] pig
+    - [x] pig
     - [ ] pigman
     - [ ] pigzombie
     - [ ] saddle
@@ -106,3 +106,6 @@ In any way you want! Though for ease to access we recommend sticking to the tool
 - [ ] terrain.png (WIP)
 - [ ] Sounds
 - [ ] Music
+
+# Resources
+- [The Secrets of Minecraft's Old Textures by _jspecter](https://youtu.be/P6BvcLnESIM)
